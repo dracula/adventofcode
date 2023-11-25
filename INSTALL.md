@@ -1,19 +1,13 @@
-### [Foobar](https://foobar.com)
+### [Advent of Code](https://adventofcode.com)
 
-#### Install using Git
+#### Install using browser extension
 
-If you are a git user, you can install the theme and keep up to date by cloning the repo:
+- Install Stylus for [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne), [Firefox](https://addons.mozilla.org/pt-BR/firefox/addon/styl-us/) or [Opera](https://addons.opera.com/pt-br/extensions/details/stylus/)
 
-```bash
-git clone https://github.com/dracula/foobar.git
-```
+- [Click here to install Dracula for Advent of Code](https://github.com/dracula/adventofcode/raw/main/dracula.user.css)
+
+- Once installed, it will replace the default theme with Dracula!
 
 #### Install manually
 
-Download using the [GitHub `.zip` download](https://github.com/dracula/foobar/archive/master.zip) option and unzip them.
-
-#### Activating theme
-
-1. Do this;
-2. Then that;
-3. Boom! It's working ✨
+You can find a link to the css that you'll need to manually inject on Stylus [here](https://github.com/dracula/adventofcode/blob/main/dracula.user.css).

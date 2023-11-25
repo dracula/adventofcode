@@ -1,0 +1,204 @@
+/* ==UserStyle==
+@name           Oficial Dracula Theme
+@namespace      github.com/dracula/adventofcode
+@version        1.0.0
+@description    A dark theme for Advent of Code
+@supportURL     https://github.com/dracula/adventofcode/issues
+@license        MIT
+==/UserStyle== */
+
+@-moz-document domain("adventofcode.com") {
+
+/* configuration in this block */
+body {
+	--links: #bd93f9;
+	/* used for most links */
+
+	--also-links: #ff79c6;
+	/* used for some links and the title */
+	
+	--background: #282a36;
+	/* used for the background */
+	
+	--foreground: #f8f8f2;
+	/* used for most text */
+	
+	--alt-background: #44475a;
+	/* used for code blocks, etc. */
+	
+	--lesser-foreground: #6272a4;
+	/* used for less important text */
+	
+	--foreground-emphasis: #8be9fd;
+	/* text shadows for foreground's emphasis */
+	
+	--gold-star-color: #f1fa8c;
+	/* used for stars */
+	
+	--silver-star-color: #8be9fd;
+	/* used for stars */
+	
+	--empty-star-color: #6272a4;
+	/* used for stars */
+	
+	--user-in-heading: #50fa7b;
+	/* used for the user in the heading */
+	
+	--leaderboard-total-score: #ffb86c;
+	/* used for the total score in the leaderboard */
+	
+	--calender-u: #50fa7b;
+	/* used for the calendar-color-u in the calendar (unknown behavior) */
+
+	--show-sponsors: block;
+	/* none: hide sponsors,
+	 * block: show sponsors
+	 * The ads are not very annoying, and removing them makes the site look worse,
+	 * but here's this option.
+	 */
+}
+
+
+/* ================= BASICS ================= */
+
+body {
+	/* set background color */
+	background-color: var(--background);
+}
+
+#sidebar,
+#sidebar * {
+	/* hide sponsors */
+	display: var(--show-sponsors);
+}
+
+body,
+article h2,
+article em,
+.calendar a .calendar-day {
+	color: var(--foreground);
+}
+
+article em {
+	text-shadow: 0 0 5px var(--foreground-emphasis);
+}
+
+code::before,				/*  code block   */
+input[type="radio"]~span:hover,		/* radio button? */
+input[type="radio"]~span:focus,		/* radio button? */
+input[type="checkbox"]~span:hover,	/*   checkbox?   */
+input[type="checkbox"]~span:focus	/*   checkbox?   */
+{
+	background-color: var(--alt-background);
+}
+
+input[type="text"], textarea	/* text box */
+{
+	background-color: var(--alt-background);
+	border-color: var(--lesser-foreground);
+}
+
+/* ================== UNIMPORTANT ================== */
+.calendar>a,
+.quiet,
+.leaderboard-anon,
+.hidden-until-hover::before {
+	opacity: 1;
+	color: var(--lesser-foreground);
+}
+
+.stats>a {
+	color: var(--lesser-foreground);
+}
+
+.hidden-until-hover {
+	border-color: var(--lesser-foreground);
+}
+
+/* ======================= LINKS ======================= */
+a {
+	color: var(--links);
+}
+
+a:hover,
+a:focus {
+	text-shadow: 1px 1px 5px var(--links);
+	color: var(--links);
+}
+
+.share:hover,
+.share:focus-within,
+.share,
+input[type="submit"] {
+	color: var(--also-links);
+}
+
+/* header color */
+header h1 a,
+header h1 span {
+	color: var(--also-links);
+	text-shadow: 0 0 2px var(--also-links), 0 0 5px var(--also-links);
+}
+
+/* some weird shenanigans */
+header h1 a:hover,
+header h1 a:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+	color: var(--also-links);
+	text-shadow: 0 0 2px var(--also-links), 0 0 5px var(--also-links);
+}
+
+/* ======================= SPECIAL COLORS ======================= */
+
+/* gold star*/
+.star-count,
+.calendar a.calendar-verycomplete .calendar-mark-verycomplete,
+.leaderboard-daydesc-both,
+.privboard-star-both,
+.stats-both {
+	color: var(--gold-star-color);
+}
+
+/* silver star*/
+.leaderboard-daydesc-first,
+.privboard-star-firstonly,
+.stats-firstonly {
+	color: var(--silver-star-color);
+}
+
+
+/* gold success */
+.day-success {
+	color: var(--gold-star-color);
+	text-shadow: 0 0 5px var(--gold-star-color);
+}
+
+/* empty star */
+.privboard-days>span,
+.privboard-star-unlocked {
+	color: var(--empty-star-color);
+}
+
+/* leaderboard scores */
+.leaderboard-entry .leaderboard-totalscore {
+	color: var(--leaderboard-total-score);
+}
+
+/* gold text in task description */
+article em.star {
+	color: var(--gold-star-color);
+	text-shadow: 0 0 5px var(--gold-star-color);
+}
+
+/* user in heading */
+.user {
+	color: var(--user-in-heading);
+}
+
+/* calendar color-u */
+.calendar .calendar-color-u {
+	color: var(--calender-u);
+}
+
+}
